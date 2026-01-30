@@ -1,3 +1,6 @@
 {
-    "vscode_vibrancy.opacity": -1
+    "vscode_vibrancy.opacity": -1,
+    "vs-code-prettier-eslint.prettierLast": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

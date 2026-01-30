@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="opencamera">Open Camera</button>
+
+<div id="cameraModal" style="display:none;">
+  <video id="video" autoplay></video>
+  <button id="closeCamera">Close</button>
+</div>
+<script>
+    const opencamera = document.getElementById("opencamera");
+const modal = document.getElementById("cameraModal");
+const video = document.getElementById("video");
+const closeCamera = document.getElementById("closeCamera");
+
+let stream;
+
+opencamera.addEventListener("click", async () => {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false,
+    });
+
+    video.srcObject = stream;
+    modal.style.display = "block";
+  } catch (err) {
+    alert("Camera access denied!");
+    console.error(err);
+  }
+});
+
+closeCamera.addEventListener("click", () => {
+  modal.style.display = "none";
+  if (stream) {
+    stream.getTracks().forEach(track => track.stop());
+  }
+});
+
+</script>
+</body>
+</html>
