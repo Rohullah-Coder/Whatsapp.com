@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="flex flex-col gap-4 pb-2 px-4 fixed w-full bg-[#0b121a] z-100">
+        <nav class="w-full flex justify-between items-center pt-6 text-white/90 ">
+            <p class="select-none text-2xl font-bold text-white">WhatsApp</p>
+            <span class="flex gap-8 text-xl">
+                <i class="fa-regular fa-camera"></i>
+                <i class="fas fa-ellipsis-vertical" id="menue"></i>
+            </span>
+        </nav>
+        <div class="text-white/70 px-4 py-3 border-none rounded-full flex gap-4 items-center bg-white/10">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search ..." class="w-full outline-none">
+        </div>
+        <!-- menue toogle option -->
+        <div id="menuetoggle" class="absolute right-0 top-16 bg-inherit p-4 w-1/2 hidden flex-col gap-4 text-white ">
+        <a href="">New group</a>
+        <a href="">New broadcast</a>
+        <a href="">Linked devices</a>
+        <a href="">Starred</a>
+        <a href="">Read all</a>
+        <a href="">Settings</a>
+
+
+        </div>
+    </header>
+    <main class="h-[150vh]  bg-[#0b121a] pt-38">
+        <!-- first whatsapp page / home page -->
+        <section class="flex flex-col gap-6">
+                <nav class="text-white/60 w-full  text-sm px-2" >
+                    <ul class="w-full flex gap-2">
+                        <li><a href="" class="max-w-max border border-white/20 rounded-full p-2 px-3 bg-green-950 text-white">All</a></li>
+                        <li><a href="" class="max-w-max border border-white/20 rounded-full p-2 px-3">Unread</a></li>
+                        <li><a href="" class="max-w-max border border-white/20 rounded-full p-2 px-3 ">Favorites</a></li>
+                        <li><a href="" class="max-w-max border border-white/20 rounded-full p-2 px-3 ">Groups</a></li>
+                        <li><a href="" class="max-w-max border border-white/20 rounded-full p-2 px-3 ">+</a></li>
+                    </ul>
+                </nav>
+                <article></article>
+                
+        </section>
+        <footer class="border-t border-white/30 text-center">
+                  <div class="flex p-4 text-sm text-white/60 text-center justify-center gap-1 items-center">
+                    <i class="fas fa-lock"></i>
+                    <p>Your personal messages are <span class="text-green-600">end-to-end encrypted</span></p>
+                  </div>
+                </footer>
+    </main>
+    <footer class="flex fixed bottom-0 right-0 left-0 bg-[#0b121a]">
+      <ul class="w-full flex justify-between text-white p-8">
+        <li><a href="./landingpage.html" class="flex flex-col justify-center items-center gap-1 "><i class="fa-regular fa-message w-full"></i><p>Chats</p></a></li>
+        <li><a href="./updates.html" class="flex flex-col justify-center items-center gap-1"><i class="fa-regular fa-clock"></i><p>Updates</p></a></li>
+        <li><a href="" class="flex flex-col justify-center items-center gap-1"><i class="fas fa-users"></i><p>Communities</p></a></li>
+        <li><a href="" class="flex flex-col justify-center items-center gap-1"><i class="fas fa-phone"></i><p>Calls</p></a></li>
+      </ul>
+
+    </footer>
+</body>
+</html>
